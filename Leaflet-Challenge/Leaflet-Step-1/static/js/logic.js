@@ -59,7 +59,6 @@ legend.addTo(myMap);
 
 
 // Using the pointToLayer option to create a CircleMarker
-//for (var i = 0; i < .length; i++) {
 
 
 function createFeatures(earthquakeData) {
@@ -76,7 +75,7 @@ var earthquakes = L.geoJSON(earthquakeData, {
            
         //console.log(feature.properties.mag);
         return L.circleMarker(latlng, geojsonMarkerOptions)
-        .bindPopup("<h1>" + feature.properties.place + "</h1>", {maxwidth:30})}
+        .bindPopup("<h1>" + feature.properties.place + "</h1>")}
     
 }).addTo(myMap);
 
